@@ -1,5 +1,5 @@
 # BhoomiNiti
-Local: `pip install -r requirements.txt && GEMINI_API_KEY=xxx uvicorn app:app --reload` then open http://localhost:8000
+Local: `pip install -r requirements.txt && GEMINI_API_KEY=xxx uvicorn app:app --reload` then open https://bhoominiti.vercel.app/
 
 Railway: push this folder, set env `GEMINI_API_KEY` (and optional `ADMIN_KEY` for approving contributions, `GEMINI_MODEL`).
 Note: Railway disk is ephemeral; attach a Volume for `data/` to keep imports/contributions.
