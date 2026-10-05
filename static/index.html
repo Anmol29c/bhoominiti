@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BhoomiNiti — Evidence-Based Land Governance</title>
+<style>
+:root{--bg:#08110f;--panel:#101c19;--panel2:#14241f;--line:#24433a;--text:#edf7f2;--muted:#9bb4aa;--accent:#42d392;--accent2:#79e2bb;--warn:#f2c14e;--danger:#ff7373}
+*{box-sizing:border-box}body{margin:0;background:linear-gradient(135deg,#06100d,#0b1714 55%,#08120f);color:var(--text);font:14px Inter,system-ui,Arial,sans-serif}button,input,select{font:inherit}
+.app{display:flex;min-height:100vh}.side{width:250px;background:#091512;border-right:1px solid var(--line);padding:22px 16px;position:fixed;top:0;bottom:0}.brand{font-size:22px;font-weight:800;letter-spacing:-.5px;margin-bottom:5px}.brand span{color:var(--accent)}.tag{color:var(--muted);font-size:11px;margin-bottom:28px}.nav button{display:block;width:100%;text-align:left;border:0;background:transparent;color:#b9cec5;padding:12px 13px;border-radius:10px;margin:4px 0;cursor:pointer}.nav button:hover,.nav button.active{background:#153027;color:#fff}.nav button.active{box-shadow:inset 3px 0 var(--accent)}.bottom{position:absolute;bottom:18px;left:16px;right:16px;color:var(--muted);font-size:11px;line-height:1.5}
+main{margin-left:250px;width:calc(100% - 250px);padding:25px 30px}.top{display:flex;justify-content:space-between;align-items:center;margin-bottom:25px}.eyebrow{color:var(--accent);font-size:11px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase}.title{font-size:27px;font-weight:800;margin:5px 0}.sub{color:var(--muted)}.user{background:var(--panel);border:1px solid var(--line);padding:9px 13px;border-radius:10px}
+.page{display:none}.page.active{display:block}.grid{display:grid;gap:14px}.stats{grid-template-columns:repeat(4,1fr)}.card{background:linear-gradient(180deg,#11201c,#0e1b18);border:1px solid var(--line);border-radius:14px;padding:18px;box-shadow:0 10px 30px #0002}.statnum{font-size:28px;font-weight:800;margin:8px 0}.muted{color:var(--muted)}.up{color:var(--accent);font-size:12px}.warn{color:var(--warn)}.danger{color:var(--danger)}
+.two{grid-template-columns:1.35fr .65fr;margin-top:15px}.three{grid-template-columns:repeat(3,1fr);margin-top:15px}.sectiontitle{font-weight:750;font-size:16px;margin-bottom:14px}.toolbar{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:14px}input,select{background:#0b1714;border:1px solid var(--line);color:#fff;border-radius:9px;padding:10px 12px;outline:none}input:focus,select:focus{border-color:var(--accent)}button.primary{background:var(--accent);color:#052016;border:0;border-radius:9px;padding:10px 14px;font-weight:800;cursor:pointer}button.secondary{background:#173129;color:#dff8ed;border:1px solid var(--line);border-radius:9px;padding:10px 14px;cursor:pointer}
+.map{height:355px;border-radius:12px;position:relative;overflow:hidden;background:
+linear-gradient(30deg,transparent 46%,#21463b 47%,transparent 48%),
+linear-gradient(145deg,transparent 49%,#1d3e35 50%,transparent 51%),
+radial-gradient(circle at 32% 42%,#2a634f 0 5%,transparent 5.5%),
+radial-gradient(circle at 63% 30%,#326c57 0 4%,transparent 4.5%),
+radial-gradient(circle at 74% 68%,#275b49 0 6%,transparent 6.5%),
+#0b1915;border:1px solid #285144}.map:after{content:"INDIA • LAND GOVERNANCE DATA LAYER";position:absolute;left:16px;top:14px;color:#b5d7ca;font-size:10px;letter-spacing:1px}.pin{position:absolute;width:12px;height:12px;border:3px solid #07120f;background:var(--accent);border-radius:50%;box-shadow:0 0 0 5px #42d39233}.p1{left:32%;top:44%}.p2{left:59%;top:31%}.p3{left:71%;top:65%}.p4{left:44%;top:70%}.maplabel{position:absolute;right:14px;bottom:12px;background:#08120fd9;padding:8px 10px;border:1px solid var(--line);border-radius:8px;color:#bcd4ca;font-size:11px}
+.bar{height:8px;background:#20362f;border-radius:9px;overflow:hidden}.bar i{display:block;height:100%;background:var(--accent);border-radius:9px}.row{display:flex;justify-content:space-between;gap:12px;align-items:center;margin:13px 0}.badge{padding:5px 8px;border-radius:7px;background:#173129;color:#aee8d0;font-size:11px}.badge.y{color:#f7d878;background:#3a3119}.badge.r{color:#ffaaa0;background:#391d1d}
+table{width:100%;border-collapse:collapse}th,td{text-align:left;padding:12px 9px;border-bottom:1px solid #1d3830}th{color:#8fa9a0;font-size:11px;text-transform:uppercase;letter-spacing:.7px}td{font-size:13px}.searchbox{width:100%;margin-bottom:10px}
+.chat{height:390px;display:flex;flex-direction:column}.messages{flex:1;overflow:auto;padding-right:4px}.msg{max-width:88%;padding:11px 13px;border-radius:12px;margin:8px 0;line-height:1.45}.ai{background:#162b24;border:1px solid #25483c}.me{background:#204f3d;margin-left:auto}.chatinput{display:flex;gap:8px;margin-top:10px}.chatinput input{flex:1}
+.sim-result{font-size:30px;font-weight:800;color:var(--accent);margin:10px 0}.slider{width:100%;accent-color:var(--accent)}
+.notice{padding:12px;border-left:3px solid var(--accent);background:#10231d;border-radius:8px;color:#bdd5cc;line-height:1.5}
+@media(max-width:900px){.side{width:72px;padding:16px 8px}.brand{font-size:0}.brand span{font-size:22px}.tag,.nav button span,.bottom{display:none}main{margin-left:72px;width:calc(100% - 72px);padding:18px}.stats,.three{grid-template-columns:repeat(2,1fr)}.two{grid-template-columns:1fr}.top{align-items:flex-start}.title{font-size:22px}}
+@media(max-width:600px){.stats,.three{grid-template-columns:1fr}.top{display:block}.user{display:inline-block;margin-top:10px}}
+
+.site-footer{margin:70px -30px 0;padding:42px 30px 20px;background:#06100d;border-top:1px solid #24433a}.footer-grid{display:grid;grid-template-columns:1.6fr 1fr 1.3fr 1fr;gap:35px;max-width:1250px;margin:auto}.footer-brand{font-size:23px;font-weight:850}.footer-brand span{color:var(--accent)}.site-footer p{color:var(--muted);line-height:1.6;max-width:390px}.site-footer h4{margin:0 0 13px}.site-footer a{display:block;color:#a9c0b7;text-decoration:none;margin:9px 0;font-size:13px}.site-footer a:hover{color:var(--accent)}.gov-badge{display:inline-block;border:1px solid var(--line);padding:8px 10px;border-radius:8px;color:#c8ded6;font-size:11px}.footer-bottom{max-width:1250px;margin:30px auto 0;padding-top:16px;border-top:1px solid #1b332c;color:#78938a;font-size:11px;display:flex;justify-content:space-between}.faq-section{max-width:1250px;margin:0 auto 50px;padding:42px 0}.faq-head{display:flex;justify-content:space-between;align-items:end;margin-bottom:22px}.faq-head h2{margin:5px 0;font-size:25px}.faq-head p{color:var(--muted)}.faq-pill{padding:9px 12px;border:1px solid #2a5648;background:#10261f;color:#9fe0c1;border-radius:99px;font-size:11px}.faq-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}details{background:linear-gradient(180deg,#101e1a,#0d1916);border:1px solid var(--line);border-radius:12px;padding:15px 17px}summary{cursor:pointer;font-weight:700}details p{color:var(--muted);line-height:1.55;margin:12px 0 0}.page:after{content:"";display:block;height:1px}
+@media(max-width:850px){.footer-grid,.faq-grid{grid-template-columns:1fr 1fr}.footer-bottom{display:block}.footer-bottom span{display:block;margin:6px 0}}
+@media(max-width:600px){.site-footer{margin:55px -18px 0;padding:35px 18px 18px}.footer-grid,.faq-grid{grid-template-columns:1fr}.faq-section{padding:35px 0;margin-bottom:25px}.faq-head{display:block}.faq-pill{display:inline-block;margin-top:10px}}
+
+textarea{font:inherit}.mapsvg{position:absolute;inset:0;width:100%;height:100%}.chip{display:inline-block;margin:6px 5px 0 0;padding:3px 8px;border-radius:99px;background:#10261f;border:1px solid #2a5648;color:#9fe0c1;font-size:10px}.qp{margin:3px 4px 3px 0;font-size:12px;padding:7px 10px}
+#modal{position:fixed;inset:0;background:#000a;display:none;align-items:center;justify-content:center;z-index:50;padding:18px}#modal .card{max-width:520px;width:100%}.dtl{margin-top:14px}.mini{font-size:12px;color:var(--muted)}.sel td{background:#14302a}tbody tr.clk{cursor:pointer}
+
+.grid>*,.card{min-width:0}.card{overflow-x:auto}table{min-width:460px}.site-footer{margin-top:40px}
+@media(max-width:700px){.side{top:auto;width:100%;height:auto;left:0;right:0;bottom:0;border-right:0;border-top:1px solid var(--line);padding:6px;z-index:40}.brand,.tag,.bottom{display:none}.nav{display:flex;overflow-x:auto}.nav button{flex:0 0 auto;width:auto;padding:10px 14px;margin:0 2px}main{margin-left:0;width:100%;padding:16px 14px 86px}.site-footer{margin:40px -14px 0}.map{height:300px!important}.chat{height:70vh}}
+</style>
+</head>
+<body>
+<div class="app">
+<aside class="side">
+  <div class="brand">Bhoomi<span>Niti</span></div><div class="tag">SIH26019 • Evidence-based land governance</div>
+  <div class="nav">
+    <button class="active" data-page="dashboard">◈ <span>National Dashboard</span></button>
+    <button data-page="gis">⌖ <span>GIS Explorer</span></button>
+    <button data-page="research">▤ <span>Research Repository</span></button>
+    <button data-page="assistant">✦ <span>AI Policy Assistant</span></button>
+    <button data-page="simulator">◉ <span>Policy Simulator</span></button>
+    <button data-page="contribute">＋ <span>Data Contribution</span></button>
+  </div>
+  <div class="bottom">Prototype • Ministry of Rural Development<br>Built for Smart India Hackathon 2026</div>
+</aside>
+
+<main>
+<div class="top"><div><div class="eyebrow">National Digital Platform</div><div class="title" id="pageTitle">Land Governance Intelligence</div><div class="sub">Discover evidence. Analyse land systems. Support better policy.</div></div><div class="user"><span id="who">● Analyst workspace</span></div></div>
+
+<section id="dashboard" class="page active">
+  <div class="grid stats">
+    <div class="card"><div class="muted">Indexed resources</div><div class="statnum" id="sRes">–</div><div class="up" id="sResN"></div></div>
+    <div class="card"><div class="muted">States/UTs in dataset</div><div class="statnum" id="sDis">–</div><div class="up" id="sSt"></div></div>
+    <div class="card"><div class="muted">Villages with digitised RoR</div><div class="statnum" id="sDig">–</div><div class="up">national CLR completion</div></div>
+    <div class="card"><div class="muted">Pending contributions</div><div class="statnum" id="sPend">–</div><div class="up">awaiting verification</div></div>
+  </div>
+  <div class="grid two">
+    <div class="card"><div class="sectiontitle">Land governance overview <span class="mini">(real DILRMP data, Lok Sabha USQ 749, 25 Jul 2023)</span></div><div class="map" id="dmap"><div class="maplabel">Colour = CLR completion (green ≥90%, amber 50–90%, red &lt;50%)</div></div></div>
+    <div class="card"><div class="sectiontitle">Priority indicators</div><div id="dInd"></div><div class="notice" id="dInsight" style="margin-top:17px"></div></div>
+  </div>
+  <div class="grid three">
+    <div class="card"><div class="sectiontitle">Latest evidence</div><p id="dLatest"></p><button class="secondary" onclick="go('research')">Open repository</button></div>
+    <div class="card"><div class="sectiontitle">Emerging issue</div><p id="dIssue"></p><button class="secondary" onclick="setGis('','dis');go('gis')">View in GIS</button></div>
+    <div class="card"><div class="sectiontitle">Ask BhoomiAI</div><p class="muted">Rank districts, search evidence, run scenarios.</p><button class="primary" onclick="go('assistant')">Open assistant</button></div>
+  </div>
+</section>
+
+<section id="gis" class="page">
+  <div class="grid two" style="margin-top:0">
+    <div class="card"><div class="sectiontitle">GIS Explorer</div>
+      <div class="toolbar"><select id="gStatus" onchange="renderGis()"><option value="all">All states/UTs</option><option value="lo">CLR below 50%</option><option value="mid">CLR 50–90%</option><option value="hi">CLR 90%+</option></select><select id="gInd" onchange="renderGis()"><option value="p">CLR completion %</option><option value="vil">Villages (bubble size)</option><option value="ror">RoR records (bubble size)</option></select><button class="secondary" onclick="exportCsv()">Export CSV</button></div>
+      <div class="map" id="gmap" style="height:430px"><div class="maplabel">Click a state marker</div></div>
+    </div>
+    <div class="card"><div class="sectiontitle">District detail</div><div id="gDetail" class="muted">Select a state on the map or table.</div></div>
+  </div>
+  <div class="card" style="margin-top:15px"><table><thead><tr><th>State/UT</th><th>CLR villages</th><th id="gHead"></th></tr></thead><tbody id="gRows"></tbody></table></div>
+</section>
+
+<section id="research" class="page">
+  <div class="card">
+    <div class="sectiontitle">Research & Evidence Repository <span class="mini" id="rCount"></span></div>
+    <input class="searchbox" id="rQ" placeholder="Search papers, policies, datasets, case studies..." oninput="renderRes()">
+    <div class="toolbar"><select id="rType" onchange="renderRes()"><option>All resource types</option><option>Research Paper</option><option>Government Report</option><option>Policy</option><option>Dataset</option><option>Case Study</option></select><select id="rYear" onchange="renderRes()"><option>All years</option><option>2026</option><option>2025</option><option>2024</option></select><label class="mini" style="align-self:center"><input type="checkbox" id="rSaved" onchange="renderRes()"> Saved only</label></div>
+    <table><thead><tr><th>Resource</th><th>Type</th><th>Year</th><th>Relevance</th><th></th></tr></thead><tbody id="rRows"></tbody></table>
+  </div>
+</section>
+
+<section id="assistant" class="page">
+  <div class="grid two">
+    <div class="card chat"><div class="sectiontitle">BhoomiAI — Evidence-aware Policy Assistant</div>
+      <div class="messages" id="messages"><div class="msg ai">Namaste! Main data search kar sakta hoon, states rank kar sakta hoon, scenarios run kar sakta hoon aur resources save kar sakta hoon. Poochho ya kaam batao.</div></div>
+      <div class="chatinput"><input id="chatInput" placeholder="e.g. Sabse kam CLR wale 5 states dikhao" onkeydown="if(event.key==='Enter') askAI()"><button class="primary" id="askBtn" onclick="askAI()">Ask</button></div>
+    </div>
+    <div class="card"><div class="sectiontitle">Try these</div><button class="secondary qp" onclick="askAI(this.textContent)">5 states with the lowest land-record computerisation</button><button class="secondary qp" onclick="askAI(this.textContent)">National CLR status summary</button><button class="secondary qp" onclick="askAI(this.textContent)">Find evidence on DILRMP progress</button><button class="secondary qp" onclick="askAI(this.textContent)">Run scenario: 80% investment, 70% automation, 60% grievance capacity</button><button class="secondary qp" onclick="askAI(this.textContent)">Show states below 50% CLR on the map</button><button class="secondary qp" onclick="askAI(this.textContent)">Add a case study titled 'Mutation backlog in Indore' for 2026 to the repository</button>
+      <div class="notice" style="margin-top:14px">Gemini + tools: search_resources · state_stats · rank_states · simulate_policy · show_on_map · add_resource. Data: real state-wise CLR (Lok Sabha USQ 749) + your imports.</div>
+    </div>
+  </div>
+</section>
+
+<section id="simulator" class="page">
+  <div class="grid two">
+    <div class="card"><div class="sectiontitle">Policy Scenario Simulator</div>
+      <p class="muted">Adjust a policy intervention and estimate directional impact using the prototype model.</p>
+      <label>Land-record digitisation investment <b id="invVal">50%</b></label><input class="slider" id="investment" type="range" min="0" max="100" value="50" oninput="simulate()">
+      <label style="display:block;margin-top:20px">Mutation workflow automation <b id="autoVal">50%</b></label><input class="slider" id="automation" type="range" min="0" max="100" value="50" oninput="simulate()">
+      <label style="display:block;margin-top:20px">Grievance resolution capacity <b id="grievVal">50%</b></label><input class="slider" id="grievance" type="range" min="0" max="100" value="50" oninput="simulate()">
+      <div class="notice" style="margin:20px 0">Demonstrative scenario model, not an official government forecast.</div>
+      <button class="primary" onclick="saveScn()">Save scenario</button> <button class="secondary" onclick="askAI('Explain this scenario and which resources support it: '+scnText())">Explain with AI</button>
+    </div>
+    <div class="card"><div class="sectiontitle">Projected directional outcomes</div>
+      <div class="muted">Service delivery score</div><div class="sim-result" id="score"></div>
+      <div class="row"><span>Mutation processing time</span><b id="time"></b></div>
+      <div class="row"><span>Grievance backlog</span><b id="backlog"></b></div>
+      <div class="row"><span>Evidence accessibility</span><b id="access"></b></div>
+      <div class="sectiontitle" style="margin-top:20px">Saved scenarios</div><div id="scnList" class="mini">None yet.</div>
+    </div>
+  </div>
+</section>
+
+<section id="contribute" class="page">
+  <div class="grid two">
+    <div class="card"><div class="sectiontitle">Contribute data / evidence</div>
+      <input id="cTitle" placeholder="Resource title" style="width:100%"><br><br>
+      <div class="toolbar"><select id="cType"><option>Research Paper</option><option>Government Report</option><option>Dataset</option><option>Policy</option><option>Case Study</option></select><select id="cYear"><option>2026</option><option>2025</option><option>2024</option></select></div>
+      <input type="file" id="cFile" style="width:100%"><br><br><textarea id="cDesc" placeholder="Short description / metadata" style="width:100%;height:100px;background:#0b1714;border:1px solid var(--line);color:#fff;border-radius:9px;padding:10px"></textarea><br><br>
+      <button class="primary" onclick="submitForm()">Submit for verification</button>
+    </div>
+    <div class="card"><div class="sectiontitle">Import real data (CSV)</div><p class="mini">Columns: state,total_ror,total_villages,clr_villages — e.g. files from data.gov.in. Existing states are updated.</p><input type="file" id="iFile" accept=".csv"> <button class="secondary" onclick="importCsv()">Import</button><div class="sectiontitle" style="margin-top:22px">Submissions & verification</div><div id="cList" class="mini">No submissions yet.</div>
+      <div class="notice" style="margin-top:14px">Submit → metadata check → reviewer approves → published in repository with Verified badge.</div>
+    </div>
+  </div>
+</section>
+<div id="faq" class="faq-section">
+  <div class="faq-head"><div><div class="eyebrow">Need help?</div><h2>Frequently Asked Questions</h2><p>Understand how the platform supports evidence-based land governance.</p></div><div class="faq-pill">Official-source ready</div></div>
+  <div class="faq-grid">
+    <details open><summary>What is BhoomiNiti?</summary><p>A proposed national digital platform that brings land-governance research, policy evidence, datasets and geospatial indicators into one discoverable workspace.</p></details>
+    <details open><summary>Who can use the platform?</summary><p>Researchers, policymakers, government departments, academics, analysts and verified data contributors can use different platform capabilities according to their roles.</p></details>
+    <details open><summary>How does the AI assistant work?</summary><p>The production version would use retrieval-augmented generation (RAG) over verified government documents, research papers and approved datasets, with source provenance and confidence indicators.</p></details>
+    <details open><summary>Is the Policy Simulator an official forecast?</summary><p>No. The prototype simulator is illustrative. A production model must be calibrated, validated and approved using authoritative datasets and domain expertise.</p></details>
+    <details open><summary>Where should official land-policy information be verified?</summary><p>Use the official Department of Land Resources website and its published DILRMP documents, guidelines and reports.</p></details>
+    <details open><summary>Can state-level land records be connected?</summary><p>Yes. The proposed architecture can integrate state/UT sources through secure APIs, data-sharing agreements, metadata standards and validation workflows.</p></details>
+  </div>
+</div>
+
+
+<footer class="site-footer">
+  <div class="footer-grid">
+    <div>
+      <div class="footer-brand">Bhoomi<span>Niti</span></div>
+      <p>National Digital Platform for Research, Policy Innovation & Evidence-Based Land Governance.</p>
+      <div class="gov-badge">🇮🇳 Government of India • SIH26019 Prototype</div>
+    </div>
+    <div><h4>Platform</h4><a href="#" onclick="go('dashboard');return false">National Dashboard</a><a href="#" onclick="go('gis');return false">GIS Explorer</a><a href="#" onclick="go('research');return false">Research Repository</a><a href="#" onclick="go('assistant');return false">AI Policy Assistant</a></div>
+    <div><h4>Government Resources</h4><a target="_blank" href="https://dolr.gov.in/en/">Department of Land Resources</a><a target="_blank" href="https://dolr.gov.in/en/programmes-schemes/dilrmp-2/">DILRMP</a><a target="_blank" href="https://dolr.gov.in/en/document-category/program-dilrmp/">DILRMP Documents</a><a target="_blank" href="https://dolr.gov.in/en/documents/">Official Documents</a></div>
+    <div><h4>Help & Information</h4><a href="#faq">FAQ</a><a target="_blank" href="https://dolr.gov.in/en/grievance-redressal/">Grievance Redressal</a><a target="_blank" href="https://dolr.gov.in/en/website-policies/">Website Policies</a><a target="_blank" href="https://dolr.gov.in/en/contact-us/">Contact Department</a></div>
+  </div>
+  <div class="footer-bottom"><span>© 2026 BhoomiNiti Prototype • Smart India Hackathon</span><span>For demonstration & evaluation purposes</span></div>
+</footer>
+</main>
+</div>
+<div id="modal" onclick="if(event.target===this)this.style.display='none'"><div class="card" id="mBody"></div></div>
+<div id="toast" style="position:fixed;right:22px;bottom:22px;background:#18382d;border:1px solid #2e624f;padding:12px 16px;border-radius:10px;display:none">Done</div>
+<script>
+const IND={p:'CLR completion %',vil:'Villages',ror:'RoR records'};
+const titles={dashboard:'Land Governance Intelligence',gis:'GIS Explorer',research:'Research & Evidence Repository',assistant:'BhoomiAI Policy Assistant',simulator:'Policy Scenario Simulator',contribute:'Data & Evidence Contribution'};
+const $=id=>document.getElementById(id),esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c])),fmt=n=>Number(n).toLocaleString('en-IN');
+let S=[],R=[],saved=new Set(),chat=[],scns=[],selN=null;
+async function api(p,o){const r=await fetch('/api'+p,o);if(!r.ok){let m=r.status;try{m=(await r.json()).detail||m}catch(e){}throw new Error(m)}return r.json()}
+async function load(){try{const d=await api('/data');S=d.states;R=d.resources;S.forEach(s=>s.p=s.vil?+(100*s.clr/s.vil).toFixed(1):0)}catch(e){toast('Backend connected nahi: '+e.message)}refresh()}
+function toast(t){let x=$('toast');x.textContent=t;x.style.display='block';clearTimeout(toast.t);toast.t=setTimeout(()=>x.style.display='none',2600)}
+function go(id){document.querySelectorAll('.nav button').forEach(b=>b.classList.toggle('active',b.dataset.page===id));document.querySelectorAll('.page').forEach(x=>x.classList.remove('active'));$(id).classList.add('active');$('pageTitle').textContent=titles[id];refresh();window.scrollTo({top:0})}
+document.querySelectorAll('.nav button').forEach(b=>b.onclick=()=>go(b.dataset.page));
+const X=l=>((l-68)/29*100).toFixed(1),Y=l=>((37-l)/29*100).toFixed(1),col=p=>p>=90?'#42d392':p>=50?'#f2c14e':'#ff7373';
+const tot=()=>{const v=S.reduce((a,s)=>a+s.vil,0),c=S.reduce((a,s)=>a+s.clr,0);return{v,c,p:v?+(100*c/v).toFixed(2):0}};
+function mapSvg(rows,k,clk){const mx=Math.max(...rows.map(s=>s[k]),1);return '<svg class="mapsvg" viewBox="0 0 100 100">'+rows.filter(s=>s.lat!=null).map(s=>{const i=S.indexOf(s),on=s.n===selN,r=(k==='p'?1.8:1+2.2*Math.sqrt(s[k]/mx))+(on?.8:0);return `<circle cx="${X(s.lon)}" cy="${Y(s.lat)}" r="${r}" fill="${col(s.p)}" fill-opacity=".85" stroke="#fff" stroke-width="${on?.5:.2}" ${clk?`onclick="selD(${i})" style="cursor:pointer"`:''}><title>${esc(s.n)}: ${s.p}%</title></circle>`}).join('')+'</svg>'}
+function setMap(el,svg){const o=el.querySelector('svg');if(o)o.remove();el.insertAdjacentHTML('afterbegin',svg)}
+function score(r,q){if(!q)return r.rel;const t=q.toLowerCase().split(/\s+/).filter(w=>w.length>2),h=(r.title+' '+r.type+' '+(r.desc||'')).toLowerCase(),m=t.filter(w=>h.includes(w)).length;return m?Math.round(100*m/t.length*r.rel/100):0}
+function searchRes(q,type,year){return R.map(r=>({r,s:score(r,q)})).filter(x=>x.s>0&&(!type||type.startsWith('All')||x.r.type===type)&&(!year||year.startsWith('All')||String(x.r.year)===year)).sort((a,b)=>b.s-a.s)}
+function renderDash(){if(!S.length)return;const t=tot(),p=R.filter(c=>c.status!=='Verified').length,hi=S.filter(s=>s.p>=90).length,lo=S.filter(s=>s.p<50).length;$('sRes').textContent=R.length;$('sResN').textContent=p+' pending';$('sDis').textContent=S.length;$('sSt').textContent=fmt(t.v)+' villages';$('sDig').textContent=t.p+'%';$('sPend').textContent=p;
+const row=(l,v,w,c)=>`<div class="row"><span>${l}</span><b class="${c||''}">${v}</b></div><div class="bar"><i style="width:${w}%"></i></div>`;
+$('dInd').innerHTML=row('National CLR completion',t.p+'%',t.p)+row('States/UTs at 90%+ CLR',hi+' / '+S.length,100*hi/S.length)+row('States/UTs below 50% CLR',lo+' / '+S.length,100*lo/S.length,'warn');
+$('dInsight').textContent='Source: Lok Sabha USQ 749 (25 Jul 2023), Dept. of Land Resources. Import newer CSVs in Data Contribution to refresh.';
+const w=[...S].sort((a,b)=>a.p-b.p).slice(0,3);$('dIssue').textContent='Lowest CLR completion: '+w.map(s=>`${s.n} (${s.p}%)`).join(', ')+'.';
+const l=R.find(x=>x.year===Math.max(...R.map(r=>r.year||0)));$('dLatest').textContent=l?l.title+' — '+l.year:'–';setMap($('dmap'),mapSvg(S,'p',false))}
+const gRows=()=>{const f=$('gStatus').value;return S.filter(s=>f==='all'||(f==='lo'?s.p<50:f==='mid'?s.p>=50&&s.p<90:s.p>=90))};
+function renderGis(){const k=$('gInd').value,r=gRows();setMap($('gmap'),mapSvg(r,k,true));$('gHead').textContent=IND[k];$('gRows').innerHTML=[...r].sort((a,b)=>k==='p'?a.p-b.p:b[k]-a[k]).map(s=>`<tr class="clk ${s.n===selN?'sel':''}" onclick="selD(${S.indexOf(s)})"><td>${esc(s.n)}</td><td>${fmt(s.clr)} / ${fmt(s.vil)}</td><td><span class="badge ${s.p<50?'r':s.p<90?'y':''}">${k==='p'?s.p+'%':fmt(s[k])}</span></td></tr>`).join('');
+const d=S.find(x=>x.n===selN);$('gDetail').innerHTML=d?`<b style="font-size:17px">${esc(d.n)}</b>`+`<div class="row"><span>CLR completion</span><b>${d.p}%</b></div><div class="bar"><i style="width:${d.p}%;background:${col(d.p)}"></i></div><div class="row"><span>Villages with CLR</span><b>${fmt(d.clr)} / ${fmt(d.vil)}</b></div><div class="row"><span>RoR records</span><b>${fmt(d.ror)}</b></div>`+(d.lat==null?'<p class="mini">No map coordinates (imported state).</p>':'')+'<div class="dtl"><b>Related evidence</b>'+searchRes(d.n+' land records').slice(0,3).map(x=>`<div class="row"><a href="#" style="color:var(--accent2)" onclick="openRes('${x.r.id}');return false">${esc(x.r.title)}</a></div>`).join('')+`</div><div class="dtl"><button class="secondary" onclick="askAI('Analyse ${esc(d.n).replace(/'/g,'')} land records status and suggest priorities')">Ask AI about this state</button></div>`:'Select a state on the map or table.'}
+function selD(i){selN=S[i].n;renderGis()}
+function exportCsv(){const t='state,total_ror,total_villages,clr_villages,clr_pct\n'+gRows().map(s=>[`"${s.n}"`,s.ror,s.vil,s.clr,s.p].join(',')).join('\n'),a=document.createElement('a');a.href=URL.createObjectURL(new Blob([t],{type:'text/csv'}));a.download='bhoominiti_states.csv';a.click()}
+function renderRes(){const r=searchRes($('rQ').value,$('rType').value,$('rYear').value).filter(x=>!$('rSaved').checked||saved.has(x.r.id));$('rCount').textContent='· '+r.length+' results';$('rRows').innerHTML=r.map(x=>`<tr><td style="white-space:normal">${esc(x.r.title)} ${x.r.status!=='Verified'?'<span class="badge y">Pending</span>':''}${saved.has(x.r.id)?' ★':''}</td><td>${x.r.type}</td><td>${x.r.year||'—'}</td><td><span class="badge">${x.s}%</span></td><td><button class="secondary" onclick="openRes('${x.r.id}')">View</button></td></tr>`).join('')||'<tr><td colspan="5" class="muted">No match.</td></tr>'}
+function openRes(id){const r=R.find(x=>x.id===id);if(!r)return;$('mBody').innerHTML=`<div class="eyebrow">${r.type} • ${r.year||'year n/a'}</div><div class="title" style="font-size:20px">${esc(r.title)}</div><p class="muted">${esc(r.desc||'No description.')}</p>${r.file?`<p class="mini">Attached: ${esc(r.file)}</p>`:''}<span class="badge ${r.status==='Verified'?'':'y'}">${r.status}</span><div class="dtl">${r.url?`<button class="primary" onclick="window.open('${esc(r.url)}','_blank','noopener')">Open source ↗</button> `:''}<button class="secondary" onclick="togSave('${id}')">${saved.has(id)?'Remove bookmark':'Bookmark'}</button> <button class="secondary" onclick="$('modal').style.display='none';askAI('Summarise the key policy takeaways of: ${esc(r.title).replace(/'/g,'')}')">Ask AI</button> <button class="secondary" onclick="$('modal').style.display='none'">Close</button></div>`;$('modal').style.display='flex'}
+function togSave(id){saved.has(id)?saved.delete(id):saved.add(id);$('modal').style.display='none';renderRes()}
+async function submitForm(){const t=$('cTitle').value.trim();if(t.length<5)return toast('Title kam se kam 5 characters');const f=$('cFile').files[0];try{await api('/resources',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({title:t,type:$('cType').value,year:+$('cYear').value,description:$('cDesc').value,file:f?f.name:''})});['cTitle','cDesc','cFile'].forEach(i=>$(i).value='');toast('Submitted for verification');load()}catch(e){toast('Fail: '+e.message)}}
+async function approve(id){let k='';for(let i=0;i<2;i++){try{await api('/resources/'+id+'/approve',{method:'POST',headers:{'X-Admin-Key':k}});toast('Verified');return load()}catch(e){if(!/401|Admin/.test(e.message))return toast(e.message);k=prompt('Admin key:')||'';if(!k)return}}toast('Wrong key')}
+async function importCsv(){const f=$('iFile').files[0];if(!f)return toast('CSV select karo');const fd=new FormData();fd.append('file',f);try{const r=await api('/import',{method:'POST',body:fd});toast(`Imported: ${r.updated} updated, ${r.added} added, ${r.skipped} skipped`);load()}catch(e){toast('Import fail: '+e.message)}}
+function renderContrib(){const c=R.filter(x=>x.id.startsWith('c'));$('cList').innerHTML=c.length?c.slice().reverse().map(x=>`<div class="row"><span>${esc(x.title)}<br><span class="mini">${x.type} • ${x.year||'—'}</span></span>${x.status==='Verified'?'<span class="badge">Verified</span>':`<button class="secondary" onclick="approve('${x.id}')">Approve</button>`}</div>`).join(''):'No submissions yet.'}
+function model(a,b,c){return{score:Math.min(100,Math.round(45+a*.22+b*.18+c*.15)),time:-Math.round(10+a*.18+b*.22),backlog:-Math.round(8+b*.12+c*.25),access:Math.round(12+a*.42)}}
+function simulate(){const a=+investment.value,b=+automation.value,c=+grievance.value,m=model(a,b,c);invVal.textContent=a+'%';autoVal.textContent=b+'%';grievVal.textContent=c+'%';$('score').textContent=m.score+'/100';$('time').textContent=m.time+'%';$('backlog').textContent=m.backlog+'%';$('access').textContent='+'+m.access+'%'}
+const scnText=()=>`investment ${investment.value}%, automation ${automation.value}%, grievance capacity ${grievance.value}%`;
+function saveScn(){scns.push(scnText()+' → score '+model(+investment.value,+automation.value,+grievance.value).score);$('scnList').innerHTML=scns.map((s,i)=>`<div class="row"><span>#${i+1} ${s}</span></div>`).join('')}
+function refresh(){renderDash();renderGis();renderRes();renderContrib();simulate()}
+function addMsg(c,h){const m=$('messages');m.insertAdjacentHTML('beforeend',`<div class="msg ${c}">${h}</div>`);m.scrollTop=m.scrollHeight;return m.lastElementChild}
+function applyActions(a){(a||[]).forEach(x=>{if(x.type==='sim'){investment.value=x.investment;automation.value=x.automation;grievance.value=x.grievance;simulate()}if(x.type==='map'){$('gInd').value=['p','vil','ror'].includes(x.indicator)?x.indicator:'p';$('gStatus').value=['all','lo','mid','hi'].includes(x.status)?x.status:'all';selN=null;go('gis')}})}
+async function askAI(txt){const i=$('chatInput'),q=(typeof txt==='string'?txt:i.value).trim();if(!q)return;i.value='';if(!$('assistant').classList.contains('active'))go('assistant');addMsg('me',esc(q));const el=addMsg('ai','Thinking…');chat.push({role:'user',content:q});$('askBtn').disabled=true;
+try{const r=await api('/chat',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({messages:chat.slice(-10)})});chat.push({role:'assistant',content:r.reply});el.innerHTML=esc(r.reply).replace(/\n/g,'<br>')+'<br>'+[...new Set(r.tools)].map(u=>`<span class="chip">⚙ ${u}</span>`).join('');await load();applyActions(r.actions)}catch(e){chat.pop();el.textContent='AI error: '+e.message}
+$('askBtn').disabled=false;$('messages').scrollTop=1e9}
+load();
+</script>
+
+</body>
+</html>

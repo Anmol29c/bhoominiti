@@ -1,0 +1,364 @@
+{
+ "states": [
+  {
+   "n": "Andaman & Nicobar Islands",
+   "ror": 92707,
+   "vil": 205,
+   "clr": 204,
+   "lat": 11.7,
+   "lon": 92.7
+  },
+  {
+   "n": "Andhra Pradesh",
+   "ror": 8708945,
+   "vil": 17563,
+   "clr": 17067,
+   "lat": 15.9,
+   "lon": 79.7
+  },
+  {
+   "n": "Arunachal Pradesh",
+   "ror": 0,
+   "vil": 5591,
+   "clr": 0,
+   "lat": 28.2,
+   "lon": 94.7
+  },
+  {
+   "n": "Assam",
+   "ror": 3168776,
+   "vil": 24542,
+   "clr": 18969,
+   "lat": 26.2,
+   "lon": 92.9
+  },
+  {
+   "n": "Bihar",
+   "ror": 43277534,
+   "vil": 47590,
+   "clr": 45650,
+   "lat": 25.1,
+   "lon": 85.3
+  },
+  {
+   "n": "Chandigarh",
+   "ror": 5392,
+   "vil": 25,
+   "clr": 25,
+   "lat": 30.73,
+   "lon": 76.78
+  },
+  {
+   "n": "Chhattisgarh",
+   "ror": 21673051,
+   "vil": 20459,
+   "clr": 19992,
+   "lat": 21.3,
+   "lon": 81.7
+  },
+  {
+   "n": "Goa",
+   "ror": 789875,
+   "vil": 425,
+   "clr": 425,
+   "lat": 15.3,
+   "lon": 74.1
+  },
+  {
+   "n": "Gujarat",
+   "ror": 12485271,
+   "vil": 18862,
+   "clr": 18783,
+   "lat": 22.3,
+   "lon": 71.2
+  },
+  {
+   "n": "Haryana",
+   "ror": 3688389,
+   "vil": 7098,
+   "clr": 6653,
+   "lat": 29.1,
+   "lon": 76.1
+  },
+  {
+   "n": "Himachal Pradesh",
+   "ror": 1361738,
+   "vil": 21006,
+   "clr": 20750,
+   "lat": 31.9,
+   "lon": 77.2
+  },
+  {
+   "n": "Jammu & Kashmir",
+   "ror": 6188889,
+   "vil": 6850,
+   "clr": 6602,
+   "lat": 33.8,
+   "lon": 75.0
+  },
+  {
+   "n": "Jharkhand",
+   "ror": 2415120,
+   "vil": 32945,
+   "clr": 32703,
+   "lat": 23.6,
+   "lon": 85.3
+  },
+  {
+   "n": "Karnataka",
+   "ror": 16333461,
+   "vil": 29527,
+   "clr": 29424,
+   "lat": 15.3,
+   "lon": 75.7
+  },
+  {
+   "n": "Kerala",
+   "ror": 14330022,
+   "vil": 1693,
+   "clr": 1693,
+   "lat": 10.5,
+   "lon": 76.3
+  },
+  {
+   "n": "Ladakh",
+   "ror": 16,
+   "vil": 247,
+   "clr": 16,
+   "lat": 34.2,
+   "lon": 77.6
+  },
+  {
+   "n": "Lakshadweep",
+   "ror": 72425,
+   "vil": 24,
+   "clr": 24,
+   "lat": 10.6,
+   "lon": 72.6
+  },
+  {
+   "n": "Madhya Pradesh",
+   "ror": 39768255,
+   "vil": 55659,
+   "clr": 55659,
+   "lat": 23.5,
+   "lon": 78.0
+  },
+  {
+   "n": "Maharashtra",
+   "ror": 24010590,
+   "vil": 44872,
+   "clr": 44830,
+   "lat": 19.5,
+   "lon": 75.7
+  },
+  {
+   "n": "Manipur",
+   "ror": 511248,
+   "vil": 2715,
+   "clr": 423,
+   "lat": 24.7,
+   "lon": 93.9
+  },
+  {
+   "n": "Meghalaya",
+   "ror": 0,
+   "vil": 6750,
+   "clr": 0,
+   "lat": 25.5,
+   "lon": 91.4
+  },
+  {
+   "n": "Mizoram",
+   "ror": 46861,
+   "vil": 826,
+   "clr": 310,
+   "lat": 23.2,
+   "lon": 92.8
+  },
+  {
+   "n": "Nagaland",
+   "ror": 107830,
+   "vil": 1600,
+   "clr": 512,
+   "lat": 26.1,
+   "lon": 94.5
+  },
+  {
+   "n": "NCT of Delhi",
+   "ror": 67010,
+   "vil": 207,
+   "clr": 196,
+   "lat": 28.65,
+   "lon": 77.2
+  },
+  {
+   "n": "Odisha",
+   "ror": 14552549,
+   "vil": 51727,
+   "clr": 51701,
+   "lat": 20.5,
+   "lon": 84.4
+  },
+  {
+   "n": "Puducherry",
+   "ror": 298219,
+   "vil": 130,
+   "clr": 119,
+   "lat": 11.9,
+   "lon": 79.8
+  },
+  {
+   "n": "Punjab",
+   "ror": 4055640,
+   "vil": 12816,
+   "clr": 12414,
+   "lat": 31.0,
+   "lon": 75.3
+  },
+  {
+   "n": "Rajasthan",
+   "ror": 11658272,
+   "vil": 48103,
+   "clr": 45622,
+   "lat": 26.6,
+   "lon": 73.8
+  },
+  {
+   "n": "Sikkim",
+   "ror": 1564313,
+   "vil": 424,
+   "clr": 388,
+   "lat": 27.6,
+   "lon": 88.5
+  },
+  {
+   "n": "Tamil Nadu",
+   "ror": 28625221,
+   "vil": 16811,
+   "clr": 16811,
+   "lat": 11.1,
+   "lon": 78.4
+  },
+  {
+   "n": "Telangana",
+   "ror": 13280649,
+   "vil": 10829,
+   "clr": 10768,
+   "lat": 17.9,
+   "lon": 79.0
+  },
+  {
+   "n": "Dadra & Nagar Haveli and Daman & Diu",
+   "ror": 93945,
+   "vil": 100,
+   "clr": 94,
+   "lat": 20.4,
+   "lon": 72.9
+  },
+  {
+   "n": "Tripura",
+   "ror": 1222481,
+   "vil": 897,
+   "clr": 897,
+   "lat": 23.8,
+   "lon": 91.6
+  },
+  {
+   "n": "Uttarakhand",
+   "ror": 1549219,
+   "vil": 17011,
+   "clr": 16100,
+   "lat": 30.1,
+   "lon": 79.2
+  },
+  {
+   "n": "Uttar Pradesh",
+   "ror": 20924304,
+   "vil": 109078,
+   "clr": 105153,
+   "lat": 26.8,
+   "lon": 80.9
+  },
+  {
+   "n": "West Bengal",
+   "ror": 36757320,
+   "vil": 42210,
+   "clr": 41678,
+   "lat": 23.0,
+   "lon": 87.9
+  }
+ ],
+ "resources": [
+  {
+   "id": "r0",
+   "title": "Lok Sabha USQ 749: National Land Records Modernisation Programme (state-wise CLR, Annexure-I)",
+   "type": "Government Report",
+   "year": 2023,
+   "desc": "Parliament answer of 25.07.2023: RoR computerised in 622,655 of 657,417 villages (94.71%); DILRMP extended to 2025-26 with Rs 875 crore outlay.",
+   "url": "https://eparlib.nic.in/bitstream/123456789/2503250/1/AU749.pdf",
+   "status": "Verified",
+   "rel": 80
+  },
+  {
+   "id": "r1",
+   "title": "Lok Sabha USQ 356: Progress under DILRMP",
+   "type": "Government Report",
+   "year": 2019,
+   "desc": "Parliament answer of 19.11.2019 on state-wise, component-wise DILRMP progress; slow progress in Arunachal Pradesh, Meghalaya, Nagaland, Manipur.",
+   "url": "https://eparlib.nic.in/bitstream/123456789/959707/1/AU356.pdf",
+   "status": "Verified",
+   "rel": 80
+  },
+  {
+   "id": "r2",
+   "title": "DILRMP programme page - Department of Land Resources",
+   "type": "Policy",
+   "year": 2016,
+   "desc": "Official DILRMP description: components include computerisation of RoR, cadastral map digitisation, registration integration, modern record rooms and revenue courts.",
+   "url": "https://dolr.gov.in/programmes-schemes/dilrmp-2/",
+   "status": "Verified",
+   "rel": 80
+  },
+  {
+   "id": "r3",
+   "title": "DILRMP physical progress data - data.gov.in",
+   "type": "Dataset",
+   "year": null,
+   "desc": "Physical progress of land-records computerisation for all 36 States/UTs; analysable down to district, tehsil and village level.",
+   "url": "https://community.data.gov.in/?p=116464",
+   "status": "Verified",
+   "rel": 80
+  },
+  {
+   "id": "r4",
+   "title": "Status of Computerization of Land Records (AIKosh dataset)",
+   "type": "Dataset",
+   "year": null,
+   "desc": "State and district level land-record digitisation, GIS integration and e-governance readiness.",
+   "url": "https://aikosh.indiaai.gov.in/home/datasets/details/status_of_computerization_of_land_records.html",
+   "status": "Verified",
+   "rel": 80
+  },
+  {
+   "id": "r5",
+   "title": "Opinion: Modernizing land records in India (PRS)",
+   "type": "Research Paper",
+   "year": null,
+   "desc": "Discusses DILRMP progress, map digitisation and the gap between record digitisation and guaranteed titles.",
+   "url": "https://prsindia.org/articles-by-prs-team/opinion-modernizing-land-records-in-india",
+   "status": "Verified",
+   "rel": 80
+  },
+  {
+   "id": "r6",
+   "title": "Digital Land Records Modernisation Programme (DILRMP) - IMPRI insights",
+   "type": "Research Paper",
+   "year": null,
+   "desc": "Component-wise DILRMP progress and state-wise highlights of CoLR and cadastral maps.",
+   "url": "https://www.impriindia.com/insights/digital-land-records-dilrmp/",
+   "status": "Verified",
+   "rel": 80
+  }
+ ]
+}
